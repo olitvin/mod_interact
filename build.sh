@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # change with the erlc path of your current ejabberd installation
-: ${EJBR_PATH:='/opt/ejabberd/'}
+: ${EJBR_PATH:='/opt/ejabberd-16.03/'}
 : ${EJBR_VERSION:='16.03'}
 
 #erl -pa . -pz ebin -make
