@@ -1,2 +1,8 @@
-erl -pa . -pz ebin -make
+#!/bin/bash
 
+# change with the erlc path of your current ejabberd installation
+: ${EJBR_PATH:='/opt/ejabberd/'}
+: ${EJBR_VERSION:='16.03'}
+
+#erl -pa . -pz ebin -make
+$EJBR_PATH/bin/erlc -DNO_EXT_LIB -DLAGER -I $EJBR_PATH/lib/fast_xml-1.1.3/include/ -I $EJBR_PATH/lib/ejabberd-$EJBR_VERSION/include/ -o ebin/ src/*
